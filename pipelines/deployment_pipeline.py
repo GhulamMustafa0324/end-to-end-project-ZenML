@@ -15,7 +15,7 @@ from steps.clean_data import clean_df
 from steps.model_train import train_model
 from steps.evaluation import evaluate_model
 from steps.ingest_data import ingest_df
-from utils import get_data_for_test
+from .utils import get_data_for_test
 
 docker_settings = DockerSettings(required_integrations=[MLFLOW])
 

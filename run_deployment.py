@@ -31,7 +31,7 @@ DEPLOY_AND_PREDICT = "deploy_and_predict"
     default=0,
     help="Minimum accuracy required to deploy the model",
 )
-def run_deploy(config: str, min_accuracy: float):
+def main(config: str, min_accuracy: float):
     mlflow_model_deployer_component = MLFlowModelDeployer.get_active_model_deployer()
     deploy = config == DEPLOY or config == DEPLOY_AND_PREDICT
     predict = config == PREDICT or config == DEPLOY_AND_PREDICT
@@ -92,4 +92,4 @@ def run_deploy(config: str, min_accuracy: float):
 
 
 if __name__ == "__main__":
-    run_deploy()
+    main()
