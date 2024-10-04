@@ -8,7 +8,6 @@ This project demonstrates a complete end-to-end machine learning pipeline using 
 - [Features](#features)
 - [Tech Stack](#tech-stack)
 - [Installation](#installation)
-- [Project Structure](#project-structure)
 - [Usage](#usage)
 - [Results](#results)
 - [Contributing](#contributing)
@@ -43,51 +42,33 @@ In this project, we implement a machine learning pipeline from data ingestion to
 ## Installation
 
 1. Clone the repository:
-   \`\`\`bash
+   ```
    git clone https://github.com/GhulamMustafa0324/end-to-end-project-ZenML.git
    cd end-to-end-project-ZenML
-   \`\`\`
+   ```
 
 2. Create and activate a virtual environment:
-   \`\`\`bash
+   ```
    python -m venv venv
    source venv/bin/activate  # For Linux/MacOS
    venv\Scripts\activate  # For Windows
-   \`\`\`
+   ```
 
 3. Install the required dependencies:
-   \`\`\`bash
+   ```
    pip install -r requirements.txt
-   \`\`\`
+   ```
 
 4. Initialize ZenML:
-   \`\`\`bash
+   ```
    zenml init
-   \`\`\`
+   ```
 
 5. Install MLflow:
-   \`\`\`bash
+   ```
    pip install mlflow
-   \`\`\`
+   ```
 
-## Project Structure
-\`\`\`
-end-to-end-project-ZenML/
-│
-├── data/                       # Raw and processed data files
-├── logs/                       # Logs generated during pipeline runs
-├── models/                     # Stored machine learning models
-├── notebooks/                  # Jupyter notebooks for exploration and analysis
-├── src/                        # Source code for the project
-│   ├── pipelines/              # ZenML pipeline definitions
-│   ├── steps/                  # Individual steps for data processing, training, etc.
-│   ├── utils/                  # Utility functions (e.g., logging, data loading)
-│
-├── mlruns/                     # MLflow experiment tracking
-├── README.md                   # Project documentation
-├── requirements.txt            # Python dependencies
-├── zenml.yaml                  # ZenML project configuration
-\`\`\`
 
 ## Usage
 
@@ -97,20 +78,20 @@ Make sure the data is in the `data/` directory. You can customize data loading i
 ### 2. Running the Pipeline
 To run the pipeline, follow these steps:
 
-\`\`\`bash
+```
 # Step 1: Train the model and track experiments
 zenml pipeline run train_pipeline
 
 # Step 2: Check results in MLflow UI
 mlflow ui
-\`\`\`
+```
 
 ### 3. Experiment Tracking
 MLflow tracks all the experiments, metrics, parameters, and artifacts. Access the MLflow UI to monitor results:
 
-\`\`\`bash
+```
 mlflow ui
-\`\`\`
+```
 
 Go to `http://localhost:5000` to access the UI.
 
